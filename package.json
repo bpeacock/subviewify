@@ -1,0 +1,27 @@
+{
+  "name": "subviewify",
+  "description": "The browserify transform for the Subview Environment",
+  "version": "0.0.1",
+  "author": "Brian Peacock",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "browserify-transform-tools": "^1.2.1",
+    "less": "^1.7.4"
+  },
+  "devDependencies": {
+    "browserify": "^5.11.0",
+    "colors": "^0.6.2",
+    "subview": "^0.2.4",
+    "tap": "^0.4.12"
+  },
+  "license": "MIT",
+  "keywords": [
+    "browserify",
+    "subview",
+    "browserify-transform"
+  ]
+}
