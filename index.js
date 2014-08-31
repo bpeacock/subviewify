@@ -10,9 +10,6 @@ module.exports = transformTools.makeStringTransform('subviewify', {
 }, function (content, options, done) {
   var file = options.file;
 
-  // Add subview library
-  content = 'var subview = require("subview");\n' + content;
-
   if(content.match(subviewRegex)) {
     var deps = [];
 
@@ -24,7 +21,7 @@ module.exports = transformTools.makeStringTransform('subviewify', {
         deps.push(path);
       }
 
-      var configArg = config ? ' data-config='+config : '';
+      var configArg = config ? " data-config='"+config.replace(/'/g, "\\'")+"'" : '';
 
       return 'script(type=\'text/subview\' data-id='+id+configArg+')';
     })
@@ -45,10 +42,7 @@ module.exports = transformTools.makeStringTransform('subviewify', {
         .replace(/"/g, '\\"'); // Escape Quotes
 
       //Add non-user arguments to subview
-      console.log(content.blue);
-      content = content.replace(subviewRegex, 'subview("'+css+'", "'+template+'", ['+deps+'], ');
-      console.log(content.yellow);
-      done(null, content);
+      done(null, content.replace(subviewRegex, 'subview("'+css+'", "'+template+'", ['+deps+'], '));
     });
   }
 });
