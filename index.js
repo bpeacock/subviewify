@@ -21,7 +21,7 @@ module.exports = transformTools.makeStringTransform('subviewify', {
         deps.push(path);
       }
 
-      var configArg = config ? " data-config='"+config.replace(/'/g, "\\'")+"'" : '';
+      var configArg = config ? ' data-config='+config : '';
 
       return 'script(type=\'text/subview\' data-id='+id+configArg+')';
     })
