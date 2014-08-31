@@ -1,7 +1,7 @@
 {
   "name": "subviewify",
   "description": "The browserify transform for the Subview Environment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Brian Peacock",
   "main": "index.js",
   "repository": {
