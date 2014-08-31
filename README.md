@@ -1,4 +1,4 @@
 Subviewify
 ==========
 
-The browserify transform for the Subview Environment (work in progress).
+The Browserify transform for the Subview Environment (work in progress).
